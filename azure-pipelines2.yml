@@ -8,8 +8,8 @@ trigger:
   branches:
     include:
     - dev/*
-    exclude:
-    - features/experimental/*
+    #exclude:
+    #- features/experimental/*
   paths:
     exclude:
     - README.md
