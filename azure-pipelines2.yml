@@ -3,10 +3,10 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
+trigger: 
   branches:
-    # include:
-   # - dev 
+    include:
+    - dev 
     exclude:
     - test
   paths:    
@@ -15,6 +15,7 @@ trigger:
       - test.html
       - example2.html
       - notrun.html
+      - ok.html
 
 pool:
   vmImage: 'ubuntu-latest'
