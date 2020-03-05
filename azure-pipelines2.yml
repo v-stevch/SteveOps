@@ -13,6 +13,7 @@ trigger:
     exclude:
       - docs/*
       - test.html
+      - example2.html
 
 pool:
   vmImage: 'ubuntu-latest'
