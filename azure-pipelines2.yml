@@ -12,6 +12,7 @@ trigger:
   paths:    
     exclude:
       - docs/*
+      - test.html
 
 pool:
   vmImage: 'ubuntu-latest'
