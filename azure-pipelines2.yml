@@ -17,6 +17,7 @@ trigger:
       - notrun.html
       - ok.html
       - stats.html
+      - finalexample.html
 
 pool:
   vmImage: 'ubuntu-latest'
