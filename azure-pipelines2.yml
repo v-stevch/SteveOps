@@ -3,8 +3,17 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger: none
-
+trigger: 
+  branches:
+    include:
+    - dev 
+    exclude:
+    - test
+  paths:    
+    exclude:
+      - docs/*
+      - example.html
+      - azure-pipelines2.yml
 
   
 pool:
