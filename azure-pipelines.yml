@@ -5,7 +5,16 @@
 
 trigger: none
 
-
+resources:
+  pipelines:
+  - pipeline: PipelineProject1
+    source: PipelineProject2
+    project: Project1
+    trigger: 
+      branches:
+         include:
+           - master
+        
 pool:
   vmImage: 'ubuntu-latest'
 
