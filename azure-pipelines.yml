@@ -7,7 +7,7 @@ trigger: none
 
 resources:
   pipelines:
-  - pipeline: PipelineProject1
+  - pipeline: pipelines
     source: PipelineProject2
     project: Project1
     trigger: 
