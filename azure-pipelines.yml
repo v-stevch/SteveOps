@@ -12,6 +12,7 @@ resources:
     trigger: 
       branches:
       - master  
+      - dev
         
 pool:
   vmImage: 'ubuntu-latest'
@@ -23,7 +24,7 @@ trigger:
   batch: true
   branches:
     include:
-    - dev
+    - master
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
