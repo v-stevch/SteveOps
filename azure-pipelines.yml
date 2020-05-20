@@ -3,23 +3,27 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger: none
 
 resources:
   pipelines:
   - pipeline: PipelineProject1
-    source: PipelineProject1
     project: Project1
+    source: PipelineProject1 
     trigger: 
       branches:
-         include:
-           - master
+      - master  
         
 pool:
   vmImage: 'ubuntu-latest'
 
 variables:
   buildConfiguration: 'Release'
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - dev
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
